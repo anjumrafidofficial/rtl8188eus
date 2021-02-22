@@ -1,4 +1,4 @@
-## rtl8188eus v5.3.9
+## tp-link TL-WN725N V2/V3 rtl8188eus v5.3.9
 
 # Realtek rtl8188eus &amp; rtl8188eu &amp; rtl8188etv WiFi drivers
 
@@ -24,8 +24,10 @@
 # Howto build/install
 1. You will need to blacklist another driver in order to use this one.
 2. `echo 'blacklist r8188eu'|sudo tee -a '/etc/modprobe.d/realtek.conf'`
-3. `make && sudo make install`
-4. Reboot in order to blacklist and load the new driver/module.
+3. `sudo apt-get -y install dkms build-essential git gcc make`
+4. `make && sudo make install`
+5. Reboot in order to blacklist and load the new driver/module.
+6. `sudo reboot`
 
 # MONITOR MODE howto
 Use these steps to enter monitor mode.
